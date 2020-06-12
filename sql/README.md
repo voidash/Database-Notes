@@ -114,6 +114,9 @@ Another way is by using ```HAVING```
               INNER JOIN economies as e
               USING (code)
               
+## Self join 
+
+They are used to compare values in the field with another value in the same field from within the same table. 
 
 
        
