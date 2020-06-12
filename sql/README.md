@@ -97,8 +97,23 @@ Another way is by using ```HAVING```
         
         SELECT name from films HAVING view_count=MAX(view_count)
         
-        
+## Inner join in SQL
 
+1. two tables whose key matches are joined. Others are discarded.
+
+         
+              select c.code as country_code,c.name,e.year,e.inflation_rate
+              FROM countries AS c
+              INNER JOIN economies as e
+              ON c.code=e.code
+              
+2. Instead of using ON clause, one can use USING clause
+        
+          select c.code as country_code,c.name,e.year,e.inflation_rate
+              FROM countries AS c
+              INNER JOIN economies as e
+              USING (code)
+              
 
 
        
