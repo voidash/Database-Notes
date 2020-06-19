@@ -118,7 +118,44 @@ Another way is by using ```HAVING```
 
 They are used to compare values in the field with another value in the same field from within the same table. 
 
+![inner join](https://i.imgur.com/2El2oAV.png)
 
-       
-      
+Left join look as:
+
+![Left join](https://i.imgur.com/p9r2lWx.png)
+
+Those gradients are missing entries. Notice how they occur on right side which means , items in left are considered primary
+
+
+          select p1.country, prime_minister,president
+          FROM prime_ministers as P1
+          LEFT JOIN presidents as P2
+          ON P1.country=P2.country;
+
+
+Right join:
+![right join](https://i.imgur.com/yWGbB7C.png)
+
+Using right joins
+
+       SELECT cities.name AS city, urbanarea_pop, countries.name AS country,
+       indep_year, languages.name AS language, percent
+        FROM languages
+          RIGHT JOIN countries
+            ON languages.code = countries.code
+          RIGHT JOIN cities
+            ON countries.code = cities.country_code
+        ORDER BY city, language;
+Same task but using left join
+    
+        SELECT cities.name AS city, urbanarea_pop, countries.name AS country,
+       indep_year, languages.name AS language, percent
+      FROM cities
+        LEFT JOIN countries
+          ON cities.country_code = countries.code
+        LEFT JOIN languages
+          ON countries.code = languages.code
+      ORDER BY city, language;
+
+
 
