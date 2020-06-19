@@ -157,5 +157,7 @@ Same task but using left join
           ON countries.code = languages.code
       ORDER BY city, language;
 
+## Full joins
 
+![Full join](https://i.imgur.com/pKLm8Sp.png)
 
