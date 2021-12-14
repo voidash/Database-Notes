@@ -1,4 +1,1 @@
-# datacamp
-
-
-## accessed Through Github Education 
+# Contains Notes related to Databases
